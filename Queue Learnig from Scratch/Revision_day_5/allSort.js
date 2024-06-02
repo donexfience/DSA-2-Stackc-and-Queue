@@ -31,7 +31,7 @@ function SelectionSort(array) {
 }
 let result1 = SelectionSort(array);
 console.log(result1);
-
+    
 function QuickSort(array) {
   if (array.length < 2) {
     return array;
@@ -49,4 +49,4 @@ function QuickSort(array) {
   return [...QuickSort(left), pivot, ...QuickSort(right)];
 }
 const result2 = QuickSort(array);
-console.log(result2);
+console.log(result2)
