@@ -30,7 +30,57 @@ class LinkedList {
     console.log(listOfNodes);
   }
   Append(value) {
-    let newNode = new Node(value);
-    let current = this.head;
+    const newNode = new Node(value);
+
+    if (this.isEmpty()) {
+      this.head = node;
+      this.tail = node;
+    }
+    this.tail.next = newNode;
+    this.tail = newNode;
+    this.size++;
+  }
+  Prepend(value) {
+    const newNode = new Node(value);
+    if (this.isEmpty()) {
+      this.head = newNode;
+      this.tail = newNode;
+    }
+    newNode.next = this.head;
+    this.head = newNode;
+    this.size++;
+  }
+  RemoveFront() {
+    if (this.isEmpty()) {
+      this.tail = null;
+      return "null";
+    } else {
+      const value = this.head.value;
+      this.head = this.head.next;
+      this.size--;
+      return value;
+    }
+  }
+  RemoveFromEnd() {
+    if (this.isEmpty()) {
+      return null;
+    } else {
+      let prev = this.head;
+      let value = this.tail.value;
+      while (prev.next != this.tail) {
+        console.log(prev);
+        prev = prev.next;
+      }
+      prev.next = null;
+    }
+  }
+}
+
+class LinkedListQueue {
+  constructor() {
+    this.list = new LinkedList();
+  }
+  Enqueue(value) {
+    this.list.Append(value);
   }
 }
