@@ -120,9 +120,9 @@ class StackUsingQueue {
     this.queue2 = new LinkedListQueue();
   }
   push(value) {
-    this.queue2.Enqueue(value);
+    this.queue2.Enqeue(value);
     if (!this.queue1.isEmpty()) {
-      this.queue2.Enqueue(this.queue1.Deqeue());
+      this.queue2.Enqeue(this.queue1.Deqeue());
     }
     let temp = this.queue1;
     this.queue1 = this.queue2;
