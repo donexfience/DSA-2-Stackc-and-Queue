@@ -47,6 +47,20 @@ class LinkedList {
             console.log(prev,"1111111111")
             prev = prev.next;
         }
+        prev.mext = nill
+        this.tail = prev
     }
   }
+}
+class stack{
+  constructor(){
+    this.list = new LinkedList();
+  }
+  pus(){
+    th
+  }
+  pop(){
+    return this.list.RemoveFront();
+  }
+  
 }
