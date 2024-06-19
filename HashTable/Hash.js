@@ -12,7 +12,7 @@ class Table {
       return key;
     }
   
-    hash(key) {
+    hash(key) { 
       key = this.convertToString(key); // Convert key to string if necessary
       let result = 0;
       for (let i = 0; i < key.length; i++) {

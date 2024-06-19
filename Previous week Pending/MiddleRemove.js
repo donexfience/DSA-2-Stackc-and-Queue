@@ -67,4 +67,4 @@ list.append(50);
 const middle = list.getMiddle();
 console.log("Middle", middle);
 list.MiddleNodeRemove();
-list.print();
+list.print();  
